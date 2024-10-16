@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navya Verma - AI & ML Student</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Lato', 'Helvetica', 'Arial', sans-serif;
+            line-height: 1.7;
+            color: #333;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f6f9;
+        }
+        h1, h2, h3 {
+            border-bottom: 2px solid #dcdcdc;
+            padding-bottom: 10px;
+            margin-top: 30px;
+            color: #333;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        h3 {
+            font-size: 20px;
+            font-weight: normal;
+            border-bottom: none;
+        }
+        .collapsible {
+            cursor: pointer;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            background-color: #e2e6ea;
+            color: #333;
+            font-size: 18px;
+        }
+        .active, .collapsible:hover {
+            background-color: #d1d6db;
+        }
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f4f6f9;
+        }
+        #toc {
+            background-color: #f9fbfc;
+            border: 1px solid #d1d6db;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+        #toc h2 {
+            margin-top: 0;
+            font-size: 20px;
+        }
+        #toc ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+        #toc ul ul {
+            padding-left: 15px;
+        }
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        p {
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Navya Verma</h1>
+    
+    <div id="toc">
+        <h2>Contents</h2>
+        <div id="toc-content"></div>
+    </div>
+
+    <section>
+        <h2 class="collapsible">1. Early Life and Education</h2>
+        <div class="content">
+            <h3>1.1 Early Schooling</h3>
+            <p>Navya Verma completed her primary and secondary education at St. Anthony's Senior Secondary School, where she developed a passion for technology and learning. Her early education laid the foundation for her intellectual curiosity and interest in computer science.</p>
+
+            <h3>1.2 High School</h3>
+            <p>In high school, Navya pursued a rigorous curriculum with a focus on science and technology. Excelling in subjects like Mathematics, Physics, and Computer Science, she demonstrated a keen analytical mind and problem-solving abilities, traits that would become central to her future endeavors in AI and machine learning.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="collapsible">2. Higher Education</h2>
+        <div class="content">
+            <h3>2.1 Bachelor of Technology in AI & ML</h3>
+            <p>Navya is currently pursuing a Bachelor of Technology in Artificial Intelligence and Machine Learning at Indira Gandhi Delhi Technical University for Women. With a CGPA of 8.25, she has proven herself to be a dedicated and ambitious student. Her academic journey reflects her commitment to understanding the intricacies of AI and its real-world applications.</p>
+
+            <h3>2.2 Specialization and Skills</h3>
+            <p>Through her coursework, Navya has gained extensive knowledge in machine learning algorithms, neural networks, and data science. Her projects, such as developing a machine learning model to predict air quality and health risks in Delhi, showcase her practical application of AI in solving real-world problems. She has also built expertise in Python, Java, web technologies, and frameworks like TensorFlow.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="collapsible">3. Career and Professional Experience</h2>
+        <div class="content">
+            <h3>3.1 AI/ML Internship at AI Club, IGDTUW</h3>
+            <p>Navya completed an internship with the AI Club at IGDTUW, where she developed models to predict air quality and assess health risks in Delhi. This hands-on experience not only sharpened her technical skills but also deepened her understanding of AI’s impact on improving quality of life through smart solutions.</p>
+
+            <h3>3.2 Leadership and Achievements</h3>
+            <p>Navya’s leadership extends beyond technical skills. As the Founder and President of Nirvana, The Design Club of IGDTUW, and the Secretary of the ACM IGDTUW chapter, she actively mentors and leads teams. Her dedication to diversity in tech is reflected in her achievement as a WE Scholar and her participation in the Goldman Sachs Women’s Possibility Summit.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="collapsible">4. Future Goals</h2>
+        <div class="content">
+            <h3>4.1 Career Aspirations</h3>
+            <p>With her strong foundation in AI and machine learning, Navya is poised to make significant contributions to the tech industry. She envisions a future where AI-driven solutions enhance sustainable agriculture, healthcare, and education. Her goal is to continue pushing the boundaries of AI innovation while maintaining a focus on ethical and impactful applications.</p>
+
+            <h3>4.2 Lifelong Learning</h3>
+            <p>As someone deeply invested in continuous learning, Navya stays updated with the latest advancements in AI and technology. She actively participates in workshops, hackathons, and online courses, ensuring she remains at the forefront of this rapidly evolving field.</p>
+        </div>
+    </section>
+
+    <script>
+        // Function to make sections collapsible
+        function makeCollapsible() {
+            var coll = document.getElementsByClassName("collapsible");
+            for (var i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        }
+
+        // Function to generate Table of Contents
+        function generateTOC() {
+            var toc = document.getElementById("toc-content");
+            var headings = document.querySelectorAll("h2, h3");
+            var tocList = document.createElement("ul");
+
+            headings.forEach(function(heading, index) {
+                if (heading.classList.contains("collapsible")) {
+                    var listItem = document.createElement("li");
+                    var link = document.createElement("a");
+                    link.textContent = heading.textContent;
+                    link.href = "#section" + index;
+                    heading.id = "section" + index;
+                    listItem.appendChild(link);
+
+                    if (heading.tagName === "H2") {
+                        tocList.appendChild(listItem);
+                    } else if (heading.tagName === "H3") {
+                        var parentList = tocList.lastElementChild.querySelector("ul") || document.createElement("ul");
+                        parentList.appendChild(listItem);
+                        if (!tocList.lastElementChild.querySelector("ul")) {
+                            tocList.lastElementChild.appendChild(parentList);
+                        }
+                    }
+                }
+            });
+
+            toc.appendChild(tocList);
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            makeCollapsible();
+            generateTOC();
+        });
+    </script>
+</body>
+</html>
